@@ -1,24 +1,30 @@
  body {
    margin: 0;
-   background-color: white;
  }
- .left {
+.left {
    width: 33%;
    height: 100%;
    position: fixed;
    background-color: #ff5c5c;
  }
- .center {
+.center {
    width: 33%;
    height: 100%;
    position: fixed;
    background-color: #ffd15c;
    left: 33.5%;
  }
- .right {
+.right {
     width: 33%;
     height: 100%;
     position: fixed;
     background-color: #b3ff5c;
     right: 0%;
   }
+.image {
+  background-color: black;
+  opacity: 0.2;
+  height: 30%;
+  width: auto;
+  margin: 5px;
+}
