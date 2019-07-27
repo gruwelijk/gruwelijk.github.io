@@ -1,3 +1,24 @@
- head {
-   background-color: black;
+ body {
+   margin: 0;
+   background-color: white;
  }
+ .left {
+   width: 33%;
+   height: 100%;
+   position: fixed;
+   background-color: blue;
+ }
+ .center {
+   width: 33%;
+   height: 100%;
+   position: fixed;
+   background-color: red;
+   left: 33.5%;
+ }
+ .right {
+    width: 33%;
+    height: 100%;
+    position: fixed;
+    background-color: green;
+    right: 0%;
+  }
