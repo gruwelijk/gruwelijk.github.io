@@ -6,13 +6,13 @@
  p {
    color: #383838;
    font-family: Verdana;
-   font-size: 15%;
+   font-size: 1.3vh;
    font-style: italic;
  }
  h1 {
    color: #191a19;
    font-family: Helvetica;
-   font-size: 10px;
+   font-size: 1vh;
 }
 .left {
    width: 33%;
@@ -43,5 +43,5 @@
 .text {
   height: 5%;
   width: auto;
-  margin: 20px;
+  margin: 25px;
 }
