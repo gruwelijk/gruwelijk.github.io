@@ -1,1 +1,1 @@
-www.gruwelijk.github.io.com
+www.gruwelijk.github.io
