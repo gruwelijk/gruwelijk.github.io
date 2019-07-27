@@ -6,19 +6,19 @@
    width: 33%;
    height: 100%;
    position: fixed;
-   background-color: blue;
+   background-color: #ff5c5c;
  }
  .center {
    width: 33%;
    height: 100%;
    position: fixed;
-   background-color: red;
+   background-color: #ffd15c;
    left: 33.5%;
  }
  .right {
     width: 33%;
     height: 100%;
     position: fixed;
-    background-color: green;
+    background-color: #b3ff5c;
     right: 0%;
   }
