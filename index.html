@@ -4,13 +4,48 @@
     <link rel="stylesheet" type="text/css"href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Walnoot </title>
+
+    <script language="javascript">
+    window.onload = function() {
+      scrollDiv_init();
+    };
+    ScrollRate = 50;
+    function scrollDiv_init() {
+      DivElmnt= document.getElementById('div');
+      DivElmnt.onmouseover = pauseDiv;
+      DivElmnt.onmouseout = resumeDiv;
+      ReachedMaxScroll = false;
+      DivElmnt.scrollTop = 0;
+      PreviousScrollTop  = 0;
+      ScrollInterval = setInterval('scrollDiv()', ScrollRate);
+    }
+    function scrollDiv() {
+      if (!ReachedMaxScroll) {
+        DivElmnt.scrollTop = PreviousScrollTop;
+        PreviousScrollTop++;
+        ReachedMaxScroll = DivElmnt.scrollTop >= (DivElmnt.scrollHeight - DivElmnt.offsetHeight);
+      }
+      else {
+        DivElmnt.scrollTop = PreviousScrollTop = 0;
+        ReachedMaxScroll = false;
+      }
+    }
+    function pauseDiv() {
+      clearInterval(ScrollInterval);
+    }
+    function resumeDiv() {
+      PreviousScrollTop = DivElmnt.scrollTop;
+      ScrollInterval = setInterval('scrollDiv()', ScrollRate);
+    }
+    </script>
+
   </head>
 
-  <body>
+  <body onLoad="scrollDiv_init()">
 
     <iframe width="0" height="0" src="https://www.youtuberepeater.com/watch?v=xwu4gvg-R6U&feature=youtu.be#gsc.tab=0" frameborder="0" allowfullscreen></iframe>
 
-    <div class="left">
+    <div class="left"div id="div" style="overflow:auto;" onMouseOver="pauseDiv()" onMouseOut="resumeDiv()">
       <div class="image"><img src="https://drive.google.com/thumbnail?id=1-SM7qzqoch1X7UmyPuzU73rTIo_xRtkA"></img></div>
       <div class="image"><img src="https://drive.google.com/thumbnail?id=1-Vhw5dKu5eQR3A2CaNgFrNzVnTT4goiV"></img></div>
       <div class="image"><img src="https://drive.google.com/thumbnail?id=1-bRsdcjxNzhRaSjwEFSswBwr1ERUijUi"></img></div>
@@ -47,7 +82,7 @@
       </div>
     </div>
 
-    <div class="right">
+    <div class="right"div id="div2" style="overflow:auto;" onMouseOver="pauseDiv()" onMouseOut="resumeDiv()">
       <div class="image"><img src="https://drive.google.com/thumbnail?id=12YLYq-FzB7mPVZumJD5yuHcYFGZKa0Wz"></img></div>
       <div class="image"><img src="https://drive.google.com/thumbnail?id=12Jf6oGXiclCDQjFxcsoJfEpNsWd0hHkD"></img></div>
       <div class="image"><img src="https://drive.google.com/thumbnail?id=12_y3wpHZP4-PnaumhjgsXBKLMtaP6lQt"></img></div>
