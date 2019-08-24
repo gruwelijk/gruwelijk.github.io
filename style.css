@@ -32,8 +32,14 @@ img {
    height: 100%;
    position: fixed;
    left: 33.5%;
-   overflow: auto;
+   overflow-y: scroll;
+   scrollbar-width: none;
+   -ms-overflow-style: none;
  }
+ .center::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
 .right {
     width: 33%;
     height: 100%;
